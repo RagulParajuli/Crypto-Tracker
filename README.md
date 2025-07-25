@@ -44,12 +44,3 @@ Light/dark mode
 Material You theming
 
 Responsive layouts with Modifier chains
-
-🚀 What You’ve Achieved:
-Built a clean, modular Android app using latest tech (Jetpack Compose).
-
-Integrated live data from an external API (likely CoinGecko).
-
-Displayed real-time market info in an elegant UI.
-
-Followed MVVM or MVI (if you prefer unidirectional data flow).
