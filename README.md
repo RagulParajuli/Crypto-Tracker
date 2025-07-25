@@ -1,46 +1,121 @@
-Tech Stack:
-Kotlin with Jetpack Compose for modern, declarative UI.
+Here's a breakdown of your Jetpack Compose Android Crypto Tracker project in bullet points:
+App Initialization & Architecture:
+The app is built in Kotlin, using Jetpack Compose for declarative UI.
 
-Retrofit for API calls to the CoinGecko API (or a similar source).
+Follows MVVM or Clean Architecture: uses ViewModel, Repository, UseCase layers, plus DI through Hilt or Koin 
+Medium
++9
+Facebook
++9
+LinkedIn
++9
+.
 
-Coroutines + ViewModel for async data handling and UI state.
+Communicates with the CoinGecko API (or similar), retrieving live price and market data via Ktor / Retrofit, using Kotlinx Serialization for JSON parsing 
+GitHub
+.
 
-Hilt or Koin (optional) for dependency injection.
+🏠 Home Screen (Crypto List):
+Displays a scrollable list of top cryptocurrencies using LazyColumn.
 
-Coil for loading coin logos.
+Each list item shows coin logo, name, symbol, current price, and 24‑hour percentage change (color‑coded).
 
-💡 Features Implemented:
-✅ 1. Real-Time Crypto Price Listing
-A scrollable list (likely using LazyColumn) that shows top coins with:
+Tapping a coin navigates to the Detail Screen for that coin 
+GitHub
++4
+Reddit
++4
+Medium
++4
+.
 
-Name, symbol, current price
+💬 Search & Favorites:
+Provides a SearchBar or TextField to filter the list by coin name or symbol in real time.
 
-24-hour price change (with color indication)
+Allows users to mark favorites, e.g. via a heart icon; favorites appear at top or in a separate list 
+Heap
++5
+GitHub
++5
+Reddit
++5
+.
 
-Coin image/logo
+📊 Coin Detail Screen:
+Shows detailed metrics: 24h/7d change %, circulating supply, market cap, daily highs/lows.
 
-✅ 2. Search Functionality
-Integrated TextField or SearchBar to filter coins by name or symbol in real-time.
+Renders a historical price chart (e.g. 7‑day) using a custom Canvas‑based line chart or built‑in chart library 
+Reddit
++2
+Facebook
++2
+GitHub
++2
+Reddit
++1
+GitHub
++1
+.
 
-✅ 3. Navigation
-Used NavHost and NavController for navigating between:
+Includes light/dark mode theming with Material 3 components for consistent UX 
+Medium
++4
+LinkedIn
++4
+Android Developers
++4
+.
 
-Home screen (coin list)
+🔀 Navigation:
+Uses Compose Navigation for moving between screens.
 
-Coin detail screen (price, market cap, charts, etc.)
+Likely implements nested navigation graphs: separate flow for authentication (if present) and main app, managed with NavHost and NavController 
+Facebook
++7
+Android Developers
++7
+Medium
++7
+Medium
++2
+Medium
++2
+Android Developers
++2
+.
 
-✅ 4. Coin Details Screen
-Detailed view with extra info like:
+⚙️ Settings & Preferences:
+Offers settings such as:
 
-Price charts (possibly using AndroidPlot or custom canvas)
+Selecting preferred currency (USD, EUR, etc.)
 
-Market Cap, Supply, 7-day trend
+Chart historical range (e.g. 1–14 days)
 
-✅ 5. UI/UX with Compose
-Beautiful, animated Compose UI with:
+Cache duration for API data refresh (e.g. 5 minutes)
 
-Light/dark mode
+Option to reset favorites and settings to default 
+GitHub
++1
+Android Developers
++1
+.
 
-Material You theming
+🧠 Technical Details & Utilities:
+Uses Coroutines + Flow / StateFlow for asynchronous data handling and UI state updates 
+GitHub
+.
 
-Responsive layouts with Modifier chains
+Dependency Injection via Hilt or Koin to manage repositories, network client, etc. 
+LinkedIn
+GitHub
+.
+
+Loads coin images via Coil or Landscapist with Glide/Fresco support 
+GitHub
+.
+
+Optional integrations: Firebase Crashlytics for crash reporting 
+GitHub
+.
+
+Example Screenshots or UI Mockups:
