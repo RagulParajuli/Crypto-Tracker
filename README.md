@@ -34,5 +34,3 @@
     -Dependency Injection via Hilt or Koin to manage repositories, network client, etc. 
     -Loads coin images via Coil or Landscapist with Glide/Fresco support 
     -Optional integrations: Firebase Crashlytics for crash reporting.
-
-## Example Screenshots or UI Mockups:
